@@ -1,0 +1,40 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.b2a8c4eb-a6f9-4635-987a-530dc05b5e26",
+      "was_cloned": false,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "alexa-audioadventskalender-skill-production"
+              }
+            }
+          }
+        }
+      },
+      "resources": {
+        "manifest": {
+          "eTag": "86bc620bcebd9593c84bdf304c2e9e31"
+        },
+        "interactionModel": {
+          "de-DE": {
+            "eTag": "168fb623b36a3f34e12a9360bfc8dffc"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:347839150037:function:alexa-audioadventskalender-skill-production",
+            "functionName": "arn:aws:lambda:us-east-1:347839150037:function:alexa-audioadventskalender-skill-production",
+            "awsRegion": "us-east-1",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "24461641-5678-456e-a792-7069f0c99730"
+          }
+        ]
+      }
+    }
+  }
+}

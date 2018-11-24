@@ -1,0 +1,48 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "summary": "Mit dem Audio Adventskalender durch den Advent.",
+          "examplePhrases": [
+            "Alexa, öffne den Audio Adventskalender",
+            "Alexa, öffne den Audio Adventskalender von gestern"
+          ],
+          "name": "Audio Adventskalender",
+          "description": "Herzlich willkommen beim Audio Adventskalender!\n\nDieser Adventskalender spielt jeden Tag ein neues instrumentalisches Musikstück ab.",
+          "keywords": [
+            "Adventskalender",
+            "Audio",
+            "Musik"
+          ],
+          "smallIconUri": "https://s3-eu-west-1.amazonaws.com/alexa-audioadventskalender-skill/icon108.png",
+          "largeIconUri": "https://s3-eu-west-1.amazonaws.com/alexa-audioadventskalender-skill/icon512.png"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "No special testing required.",
+      "category": "MUSIC_AND_AUDIO_ACCESSORIES",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "dist"
+        },
+        "interfaces": [
+          {
+            "type": "AUDIO_PLAYER"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}
