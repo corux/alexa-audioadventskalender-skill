@@ -15,7 +15,7 @@ export class AmazonHelpIntentHandler implements RequestHandler {
       } else {
         text += `Es ist noch ${remainingDays} Tag bis zum 1. Dezember. `;
       }
-      text += "Dann gibt es das erste Musikstück.";
+      text += "Dann gibt es das erste Lied.";
     } else {
       text += AmazonHelpIntentHandler.reprompt;
     }
