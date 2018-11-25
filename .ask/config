@@ -8,7 +8,7 @@
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "alexa-audioadventskalender-skill-production"
+                "uri": "arn:aws:lambda:eu-west-1:347839150037:function:alexa-audioadventskalender-skill-production"
               }
             }
           }
@@ -16,7 +16,7 @@
       },
       "resources": {
         "manifest": {
-          "eTag": "210298299404ac6226bc343783ebc843"
+          "eTag": "2135c21f3bf093d0cd123168400ccd99"
         },
         "interactionModel": {
           "de-DE": {
@@ -25,13 +25,16 @@
         },
         "lambda": [
           {
-            "arn": "arn:aws:lambda:us-east-1:347839150037:function:alexa-audioadventskalender-skill-production",
-            "functionName": "arn:aws:lambda:us-east-1:347839150037:function:alexa-audioadventskalender-skill-production",
-            "awsRegion": "us-east-1",
             "alexaUsage": [
               "custom/default"
             ],
-            "revisionId": "d5bfcc6b-c7ae-4997-b445-168eb12001c0"
+            "arn": "arn:aws:lambda:eu-west-1:347839150037:function:alexa-audioadventskalender-skill-production",
+            "awsRegion": "eu-west-1",
+            "codeUri": "dist",
+            "functionName": "alexa-audioadventskalender-skill-production",
+            "handler": "index.handler",
+            "revisionId": "84591ce7-2e46-4937-8708-931038ae6662",
+            "runtime": "nodejs8.10"
           }
         ]
       }
