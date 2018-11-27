@@ -12,7 +12,12 @@ export class DateIntentHandler implements RequestHandler {
   }
 
   public async handle(handlerInput: HandlerInput): Promise<Response> {
-    let date = DateTime.local();
+    const today = DateTime.local().set({
+      day: DateTime.local().day,
+      month: DateTime.local().month,
+      year: DateTime.local().year,
+    });
+    let date = today;
     let isDateFromSlot = false;
     if (handlerInput.requestEnvelope.request.type === "IntentRequest") {
       const slotValue = handlerInput.requestEnvelope.request.intent.slots.date.value;
@@ -23,7 +28,7 @@ export class DateIntentHandler implements RequestHandler {
       }
     }
 
-    const isDateInFuture = date.diffNow("days").days > 0;
+    const isDateInFuture = false && date.diff(today, "days").days > 1;
     const isDateInAdvent = date.month === 12 && date.day <= 24;
     if (isDateInFuture && isDateInAdvent) {
       return handlerInput.responseBuilder
@@ -59,7 +64,16 @@ export class DateIntentHandler implements RequestHandler {
     }
 
     const data = getAdventskalender(date);
+    let text = "Hier ist das Lied ";
+    if (Math.floor(date.diff(today, "days").days) === -1) {
+      text += "von gestern";
+    } else if (Math.floor(date.diff(today, "days").days) === 0) {
+      text += "von heute";
+    } else {
+      text += `vom <say-as interpret-as="date">????${date.toFormat("LLdd")}</say-as>.`;
+    }
     return handlerInput.responseBuilder
+      .speak(text)
       .addAudioPlayerPlayDirective("REPLACE_ALL", data.audioUrl, date.day.toString(), 0, undefined, {
         backgroundImage: {
           sources: [
