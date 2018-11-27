@@ -5,8 +5,8 @@
         "de-DE": {
           "summary": "Mit dem Audio Adventskalender durch den Advent.",
           "examplePhrases": [
-            "Alexa, öffne den Audio Adventskalender",
-            "Alexa, frage den Audio Adventskalender nach gestern"
+            "Alexa, öffne Audio Adventskalender",
+            "Alexa, frage Audio Adventskalender nach gestern"
           ],
           "name": "Audio Adventskalender",
           "description": "Herzlich willkommen beim Audio Adventskalender!\n\nDieser Adventskalender spielt jeden Tag ein neues instrumentalisches Musikstück ab.",
