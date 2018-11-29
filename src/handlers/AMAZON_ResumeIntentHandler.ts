@@ -7,8 +7,9 @@ export class AmazonResumeIntentHandler implements RequestHandler {
   public canHandle(handlerInput: HandlerInput): boolean {
     const request = handlerInput.requestEnvelope.request;
 
-    return request.type === "IntentRequest" &&
-      [
+    return request.type === "PlaybackController.PlayCommandIssued"
+      || request.type === "IntentRequest"
+      && [
         "AMAZON.StartOverIntent",
         "AMAZON.ResumeIntent",
         "AMAZON.NextIntent",
@@ -23,7 +24,8 @@ export class AmazonResumeIntentHandler implements RequestHandler {
         const date = DateTime.fromJSDate(tokenDate);
         const data = getAdventskalender(date);
         let offset = 0;
-        const intentName = (handlerInput.requestEnvelope.request as IntentRequest).intent.name;
+        const intentName = handlerInput.requestEnvelope.request.type === "IntentRequest"
+          && handlerInput.requestEnvelope.request.intent.name;
         if (intentName !== "AMAZON.StartOverIntent") {
           // resume playback with 10sec rewind
           const previousOffset = handlerInput.requestEnvelope.context.AudioPlayer.offsetInMilliseconds;

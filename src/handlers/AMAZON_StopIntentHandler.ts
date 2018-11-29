@@ -4,8 +4,9 @@ import { Response } from "ask-sdk-model";
 export class AmazonStopIntentHandler implements RequestHandler {
   public canHandle(handlerInput: HandlerInput): boolean {
     const request = handlerInput.requestEnvelope.request;
-    return request.type === "IntentRequest" &&
-      [
+    return request.type === "PlaybackController.PauseCommandIssued"
+      || request.type === "IntentRequest"
+      && [
         "AMAZON.CancelIntent",
         "AMAZON.StopIntent",
         "AMAZON.PauseIntent",
@@ -13,13 +14,6 @@ export class AmazonStopIntentHandler implements RequestHandler {
   }
 
   public handle(handlerInput: HandlerInput): Response {
-    const isVideoAppSupported = handlerInput.requestEnvelope.context.System.device.supportedInterfaces.VideoApp;
-
-    if (isVideoAppSupported) {
-      return handlerInput.responseBuilder
-        .getResponse();
-    }
-
     return handlerInput.responseBuilder
       .addAudioPlayerStopDirective()
       .withShouldEndSession(true)

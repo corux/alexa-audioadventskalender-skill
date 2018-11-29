@@ -74,7 +74,7 @@ export class DateIntentHandler implements RequestHandler {
     }
     return handlerInput.responseBuilder
       .speak(text)
-      .addAudioPlayerPlayDirective("REPLACE_ALL", data.audioUrl, date.day.toString(), 0, undefined, {
+      .addAudioPlayerPlayDirective("REPLACE_ALL", data.audioUrl, date.toFormat("yyyy-LL-dd"), 0, undefined, {
         backgroundImage: {
           sources: [
             {
