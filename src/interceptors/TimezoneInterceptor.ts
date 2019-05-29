@@ -6,6 +6,10 @@ export class TimezoneInterceptor implements RequestInterceptor {
   public async process(handlerInput: HandlerInput) {
     const deviceId = handlerInput.requestEnvelope.context.System.device.deviceId;
 
+    if (!deviceId) {
+      return;
+    }
+
     try {
       const timezone = await handlerInput.serviceClientFactory.getUpsServiceClient().getSystemTimeZone(deviceId);
       Settings.defaultZoneName = timezone;
