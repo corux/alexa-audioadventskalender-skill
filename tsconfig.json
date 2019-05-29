@@ -1,13 +1,4 @@
 {
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "sourceMap": true,
-    "target": "es5",
-    "resolveJsonModule": true,
-    "lib": [
-      "es2015"
-    ]
-  },
   "exclude": [
     "**/*.spec.*"
   ]
