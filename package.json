@@ -17,14 +17,14 @@
     "deploy:assets": "aws s3 sync ./assets s3://alexa-audioadventskalender-skill/ --acl public-read"
   },
   "devDependencies": {
-    "@types/luxon": "1.13.0",
+    "@types/luxon": "1.15.1",
     "@types/node": "10.14.1",
     "ask-cli": "1.7.2",
-    "ask-sdk-core": "2.5.2",
-    "ask-sdk-model": "1.15.1",
-    "luxon": "1.15.0",
+    "ask-sdk-core": "2.6.0",
+    "ask-sdk-model": "1.16.0",
+    "luxon": "1.16.0",
     "parcel-bundler": "1.12.3",
-    "tslint": "5.16.0",
-    "typescript": "3.4.5"
+    "tslint": "5.17.0",
+    "typescript": "3.5.1"
   }
 }
