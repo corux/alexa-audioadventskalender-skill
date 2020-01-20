@@ -19,12 +19,12 @@
   "devDependencies": {
     "@types/luxon": "1.21.0",
     "@types/node": "10.14.1",
-    "ask-cli": "1.7.20",
+    "ask-cli": "1.7.22",
     "ask-sdk-core": "2.7.0",
     "ask-sdk-model": "1.25.1",
     "luxon": "1.21.3",
     "parcel-bundler": "1.12.4",
     "tslint": "5.20.1",
-    "typescript": "3.7.4"
+    "typescript": "3.7.5"
   }
 }
