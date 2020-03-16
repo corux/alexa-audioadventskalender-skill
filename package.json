@@ -24,7 +24,7 @@
     "ask-sdk-model": "1.26.0",
     "luxon": "1.22.0",
     "parcel-bundler": "1.12.4",
-    "tslint": "5.20.1",
+    "tslint": "6.1.0",
     "typescript": "3.8.3"
   }
 }
