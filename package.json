@@ -19,7 +19,7 @@
   "devDependencies": {
     "@types/luxon": "1.22.0",
     "@types/node": "10.14.1",
-    "ask-cli": "2.0.1",
+    "ask-cli": "2.1.1",
     "ask-sdk-core": "2.8.0",
     "ask-sdk-model": "1.28.0",
     "luxon": "1.23.0",
