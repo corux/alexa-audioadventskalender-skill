@@ -25,6 +25,6 @@
     "luxon": "1.24.1",
     "parcel-bundler": "1.12.4",
     "tslint": "6.1.2",
-    "typescript": "3.9.5"
+    "typescript": "3.9.6"
   }
 }
