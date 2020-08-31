@@ -17,9 +17,9 @@
     "deploy:assets": "aws s3 sync ./assets s3://alexa-audioadventskalender-skill/ --acl public-read"
   },
   "devDependencies": {
-    "@types/luxon": "1.24.3",
+    "@types/luxon": "1.24.4",
     "@types/node": "10.14.1",
-    "ask-cli": "2.14.0",
+    "ask-cli": "2.15.0",
     "ask-sdk-core": "2.9.0",
     "ask-sdk-model": "1.29.0",
     "luxon": "1.25.0",
