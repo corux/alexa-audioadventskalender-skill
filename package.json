@@ -21,7 +21,7 @@
     "@types/node": "10.14.1",
     "ask-cli": "2.15.0",
     "ask-sdk-core": "2.9.0",
-    "ask-sdk-model": "1.31.0",
+    "ask-sdk-model": "1.32.0",
     "luxon": "1.25.0",
     "parcel-bundler": "1.12.4",
     "tslint": "6.1.3",
