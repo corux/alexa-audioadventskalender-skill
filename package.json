@@ -19,9 +19,9 @@
   "devDependencies": {
     "@types/luxon": "1.25.0",
     "@types/node": "10.14.1",
-    "ask-cli": "2.16.0",
+    "ask-cli": "2.16.1",
     "ask-sdk-core": "2.9.0",
-    "ask-sdk-model": "1.32.0",
+    "ask-sdk-model": "1.33.0",
     "luxon": "1.25.0",
     "parcel-bundler": "1.12.4",
     "tslint": "6.1.3",
